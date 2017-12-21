@@ -1,0 +1,6 @@
+#emacs
+*~
+/#*
+
+# build directory
+/build
