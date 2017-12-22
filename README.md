@@ -1,14 +1,14 @@
 # Assignment YARP Sinusoid                                                                                                                                                                                    
                                                                                                                                                                                                               
 The repository contains two YARP module:                                                                                                                                                                      
-* [producer](producer_module/): it opens a YARP port in streaming and send a message containing a sinusoid with given frequency and amplitude (the desired values can be setted [here](producer_module/config/config.ini))                                                                                                                                                                                                   
+* [producer](producer_module/): it opens a YARP port in streaming and sends a message containing a sinusoid with given frequency and amplitude (the desired values can be setted [here](producer_module/config/config.ini))                                                                                                                                                                                                   
 * [consumer](consumer_module/): it opens a YARP port to receive the signal and stores it into a file.                                                                                                         
                                                                                                                                                                                                               
 ## Dependencies                                                                                                                                                                                               
 * [yarp](http://www.yarp.it/)                                                                                                                                                                                 
                                                                                                                                                                                                               
 ## How to compile the modules                                                                                                                                                                                 
-In order to **compile** and **install** the modules please run this command                                                                                                                                   
+In order to **compile** and **install** the modules please run these commands                                                                                                                                   
 ```shell                                                                                                                                                                                                      
 mkdir build                                                                                                                                                                                                   
 cd build                                                                                                                                                                                                      
@@ -27,7 +27,7 @@ Launch yarpmanager
 cd assignment-yarp-sinusoid/
 yarpmanager --from app/ymanager.ini
 ```
-run all the module and connect all the port.                                                                                                                                                                  
+run all the modules and connect all the ports.                                                                                                                                                                  
 The `signal.txt` file will be saved into `assignment-yarp-sinusoid` folder.                                                                                                                                   
                                                                                                                                                                                                               
                                                                                       
