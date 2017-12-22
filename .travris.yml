@@ -1,0 +1,33 @@
+dist: trusty
+language: cmake
+sudo: required
+
+env:
+  global:
+    - YARP_REPOSITORY_URL="https://github.com/robotology/yarp.git"
+
+
+before_script:
+   - sudo apt install --assume-yes --force-yes build-essential git cmake cmake-curses-gui libedit-dev libeigen3-dev libace-dev
+   - sudo apt install --assume-yes --force-yes qtbase5-dev qtdeclarative5-dev qtmultimedia5-dev qtdeclarative5-qtquick2-plugin qtdeclarative5-window-plugin qtdeclarative5-qtmultimedia-plugin qtdeclarative5-controls-plugin qtdeclarative5-dialogs-plugin libqt5svg5
+
+   - mkdir ~/robot-code
+   - mkdir ~/robot-install
+   - export ROBOT_CODE=~/robot-code
+   - export ROBOT_INSTALL=~/robot-install
+
+   - cd $ROBOT_CODE
+   - git clone $YARP_REPOSITORY_URL
+
+   - cd yarp
+   - mkdir build
+   - cd build
+   - cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$ROBOT_INSTALL -DCREATE_GUIS=ON -DCREATE_LIB_MATH=ON ../
+   - make install
+
+script:
+  - cd $TRAVIS_BUILD_DIR
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_INSTALL_PREFIX=$ROBOT_INSTALL ../
+  - make install
