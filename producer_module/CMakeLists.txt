@@ -2,8 +2,6 @@ set(EXE_TARGET_NAME producer_module)
 
 find_package(YARP   REQUIRED)
 
-include_directories(${ctrlLib_INCLUDE_DIRS})
-
 set(${EXE_TARGET_NAME}_SRC
   producer.cpp
   )
