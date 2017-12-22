@@ -1,0 +1,28 @@
+<application>
+  <!-- Generic information-->
+  <name>Assignment-sinusoid</name>
+  <description>Solution of the assignment sinusoid</description>
+  <version></version>
+  <authors>
+    <author email="giulio.romualdi@iit.it"> Giulio Romualdi </author>
+  </authors>
+
+  <!-- Required modules. -->
+  <module>
+    <name>producer_module</name>
+    <parameters>--context producer_module</parameters>
+    <node>localhost</node>
+  </module>
+
+  <module>
+    <name>consumer_module</name>
+    <node>localhost</node>
+  </module>
+
+  <connection>
+    <from>/producer/signal:o</from>
+    <to>/consumer/signal:i</to>
+    <protocol>tcp</protocol>
+  </connection>
+  
+</application>
