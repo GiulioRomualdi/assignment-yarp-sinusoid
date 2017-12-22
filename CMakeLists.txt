@@ -7,5 +7,5 @@ project(assignment-sinusoids
   LANGUAGES CXX
   VERSION 1.0.0.0)
 
+add_subdirectory(consumer_module)
 add_subdirectory(producer_module)
-
