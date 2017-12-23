@@ -1,7 +1,5 @@
 set(EXE_TARGET_NAME producer_module)
 
-find_package(YARP   REQUIRED)
-
 set(${EXE_TARGET_NAME}_SRC
   producer.cpp
   )
