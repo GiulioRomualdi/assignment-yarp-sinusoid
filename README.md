@@ -5,7 +5,7 @@ The repository contains two YARP module:
 
 ## Dependencies
 
-* [yarp](http://www.yarp.it/)
+* [YARP](http://www.yarp.it/)
 
 ## How to compile the modules
 
