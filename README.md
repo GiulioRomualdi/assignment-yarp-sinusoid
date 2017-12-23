@@ -28,12 +28,11 @@ export PATH=${PATH}:${ROBOT_INSTALL}/bin
 
 Launch yarpmanager
 ``` sh
-cd assignment-yarp-sinusoid/
-yarpmanager --from app/ymanager.ini
+yarpmanager
 ```
 run all the modules and connect all the ports.
 
-The `signal.txt` file will be saved into `assignment-yarp-sinusoid` folder.
+The `signal.txt` file will be saved into the current folder.
 
 ## Status
 [![Build Status](https://travis-ci.org/GiulioRomualdi/assignment-yarp-sinusoid.svg?branch=master)](https://travis-ci.org/GiulioRomualdi/assignment-yarp-sinusoid)
